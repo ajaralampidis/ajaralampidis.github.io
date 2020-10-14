@@ -4,27 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Fonts Import -->
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+  <!-- Model-Viewer Import -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <!-- Model Viewer Outline fix. This file removes the outline -->
+  <script src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script> 
+
+  
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- A Frame import -->
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
   <title>Agustin Jaralampidis</title>
 </head>
 <body>
-  <h1 id='titulo'>
-    Hola que onda
-  </h1>
 
-  <div>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-    </a-scene>
+
+  <div class='modelContainer'>
+    <model-viewer
+    id='prismModel'
+    class='prismModel' 
+    src="assets/model2.glb" 
+    alt="A model that shows things I am interested in" 
+    auto-rotate
+    auto-rotate-delay= "2000"
+    rotation-per-second = "150%"
+    camera-controls
+    ar
+    max-camera-orbit = 'auto 360deg auto'
+    camera-orbit = 'auto 115deg auto'
+    environment-image="./assets/test.hdr"
+    exposure="1.4" 
+    >
+
+      <button slot="ar-button" class="arButton">
+        AR😮
+      </button>
+
+    </model-viewer>
+  </div>
+
+
+
+  <div class="profile">
+    <!-- <img src='assets/perfil1.png'> -->
+    <div class="whiteSpace">
+
+    </div>
+
+    <div class="navbarContainer">
+      <nav class="navbar">
+        <div class="title">
+          <span> Hi! I'm Agustin </span>
+          <span class="info">
+            i
+          </span>
+          <span class="infoData">
+            <span>• I'm a creative developer and designer • I'm specially interested in VR and AR • ajaralampidis@gmail.com </span>
+          </span>
+        </div>
+
+        <a class="navElement">
+          <span class="navElementIndicator"> > </span> Contact Me !
+        </a>
+        
+        <a class="navElement">
+          <span class="navElementIndicator"> > </span> Web Development
+        </a>
+
+        <a class="navElement">
+          <span class="navElementIndicator"> > </span> Art & Illustration
+        </a>
+
+        <a class="navElement">
+          <span class="navElementIndicator"> > </span> Industrial Design
+        </a>
+
+        <a class="navElement">
+          <span class="navElementIndicator"> > </span> Multimedia
+        </a>
+
+      </nav>
+      <br/>
+      <br/>
+    </div>
+
   </div>
 
 
