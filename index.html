@@ -7,11 +7,14 @@
   <!-- Google Fonts Import -->
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Poppins:wght@200&display=swap" rel="stylesheet">
 
+  <!-- FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/1c1e4c9e62.js" crossorigin="anonymous"></script>
+
   <!-- Model-Viewer Import -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <script type="module" src="./model-viewer-min.js"></script>
+  <script nomodule src='./model-viewer-legacy.js'></script>
   <!-- Model Viewer Outline fix. This file removes the outline -->
-  <script src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script> 
+  <script src="./model-viewer-fix.js"></script> 
 
   
   <!-- Estilos CSS -->
@@ -22,80 +25,148 @@
   <title>Agustin Jaralampidis</title>
 </head>
 <body>
+  <div class='home' id="home">
+
+    <div class='modelContainer'>
+      <model-viewer
+      id='prismModel'
+      class='prismModel' 
+      src="assets/model2.glb" 
+      alt="A model that shows things I am interested in" 
+      auto-rotate
+      auto-rotate-delay= "2000"
+      rotation-per-second = "150%"
+      camera-controls
+      ar
+      max-camera-orbit = 'auto 360deg auto'
+      camera-orbit = 'auto 115deg auto'
+      environment-image="./assets/test.hdr"
+      exposure="1.4" 
+      quick-look-browsers="safari chrome"
+      >
+
+        <button slot="ar-button" class="arButton">
+          See cube in Camera 📷
+        </button>
+
+      </model-viewer>
+    </div>
 
 
-  <div class='modelContainer'>
-    <model-viewer
-    id='prismModel'
-    class='prismModel' 
-    src="assets/model2.glb" 
-    alt="A model that shows things I am interested in" 
-    auto-rotate
-    auto-rotate-delay= "2000"
-    rotation-per-second = "150%"
-    camera-controls
-    ar
-    max-camera-orbit = 'auto 360deg auto'
-    camera-orbit = 'auto 115deg auto'
-    environment-image="./assets/test.hdr"
-    exposure="1.4" 
-    >
 
-      <button slot="ar-button" class="arButton">
-        AR😮
-      </button>
+    <div class="profile">
+      <!-- <img src='assets/perfil1.png'> -->
+      <div class="whiteSpace">
 
-    </model-viewer>
-  </div>
+      </div>
 
+      <div class="navbarContainer">
+        <nav class="navbar">
+          <div class="title">
+            <span> Hi! I'm Agustin </span>
+            <span class="info">
+              i
+            </span>
+            <span class="infoData">
+              <span>• I'm a creative developer and designer • I'm specially interested in VR and AR • ajaralampidis@gmail.com </span>
+            </span>
+          </div>
 
+          <a class="navElement" id='contact'>
+            <span class="navElementIndicator"> > </span> Contact Me !
+          </a>
+          
+          <a class="navElement" id='webDev'>
+            <span class="navElementIndicator"> > </span> Web Development
+          </a>
 
-  <div class="profile">
-    <!-- <img src='assets/perfil1.png'> -->
-    <div class="whiteSpace">
+          <a class="navElement" id='art'>
+            <span class="navElementIndicator"> > </span> Art & Illustration
+          </a>
+
+          <a class="navElement" id='industrialDesign'>
+            <span class="navElementIndicator"> > </span> Industrial Design
+          </a>
+
+          <a class="navElement" id='multimedia'>
+            <span class="navElementIndicator"> > </span> Multimedia
+          </a>
+
+        </nav>
+        <br/>
+        <br/>
+      </div>
 
     </div>
 
-    <div class="navbarContainer">
-      <nav class="navbar">
-        <div class="title">
-          <span> Hi! I'm Agustin </span>
-          <span class="info">
-            i
-          </span>
-          <span class="infoData">
-            <span>• I'm a creative developer and designer • I'm specially interested in VR and AR • ajaralampidis@gmail.com </span>
-          </span>
-        </div>
-
-        <a class="navElement">
-          <span class="navElementIndicator"> > </span> Contact Me !
-        </a>
-        
-        <a class="navElement">
-          <span class="navElementIndicator"> > </span> Web Development
-        </a>
-
-        <a class="navElement">
-          <span class="navElementIndicator"> > </span> Art & Illustration
-        </a>
-
-        <a class="navElement">
-          <span class="navElementIndicator"> > </span> Industrial Design
-        </a>
-
-        <a class="navElement">
-          <span class="navElementIndicator"> > </span> Multimedia
-        </a>
-
-      </nav>
-      <br/>
-      <br/>
-    </div>
-
   </div>
+
+  <div id='modalOverlay'></div>
+
+  <div id='contactModal' class="modal div">
+    <span class='modalHeader'>Hello I'm Agustin !</span>
+    <p class="smallerText">A creative web developer and designer, specially interested in Virtual and Augmented Reality.<br/>
+      I can articulate a wide range of skills to help you create innovative products.
+    </p>
+    <hr/>
+
+    <p>Please contact me. I'd love to hear from your project </p>
+    <p>Send me a Email to: <br/> <a href=""> <strong> ajaralampidis@gmail.com </strong> </a> </p> 
+    
+    <hr/>
+    <p>Otherwise you can check my Social Media and send me a DM</p>
+    
+    <p class='modalHeader'>
+      <a href=""><i class="fab fa-github"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-linkedin"></i></a>
+    </p>
+
+    <hr/>
+    <p>Hope to hear from you soon</p>
+    <p>"\(^-^)/"</p>
+  </div>
+
+  <div id='webDevModal' class="modal embed" >
+    <!-- <embed src="" type="aplication/pdf" frameborder='0' allowfullscreen> -->
+  </div>
+
+  <div id='artModal' class="modal div">
+    <div class="siema">
+      <div><img src="https://picsum.photos/200/300" alt="siemaImage"></div>
+      <div><img src="https://picsum.photos/300/300" alt="siemaImage"></div>
+      <div><img src="https://picsum.photos/400/300" alt="siemaImage"></div>
+      <div><img src="https://picsum.photos/200/300" alt="siemaImage"></div>
+      <div><img src="https://picsum.photos/200/300" alt="siemaImage"></div>
+      <div><img src="https://picsum.photos/200/300" alt="siemaImage"></div>
+    </div>
+    <div class="controlers">
+      <button class="prev">prev</button>
+      <button class="next">next</button>
+    </div>
+  </div>
+
+  <div id='industrialDesignModal' class="embed modal">
+    <embed src="./assets/Portfolio-Agustin-Jaralampidis-Small.pdf" type="application/pdf" frameborder="0" allowfullscreen>
+  </div>
+
+  <div id='multimediaModal' class="modal div"> <span> > Work in Progress, Will be ready soon ... <br /> <br /> ≧ ﹏ ≦ </span> </div>
 
 
   <script src="index.js"></script>
+  <script src="siema.min.js"></script>
+  <script>
+    let mySiema = new Siema({
+      loop: true,
+      duration: 200,
+      draggable: false,
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.next').addEventListener('click', () => mySiema.next());
+    setInterval(() => mySiema.next(), 5000)
+
+  </script>
+
 </body>
 </html>
