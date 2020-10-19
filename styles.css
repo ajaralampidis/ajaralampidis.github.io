@@ -20,7 +20,12 @@
   background-position: bottom, 0px 0px, 0px 0px;
   background-size: 57vh, auto, auto;
 
-  -webkit-animation: grain 0.1ms steps(10) infinite;
+
+  -webkit-animation-name: grain;
+  -webkit-animation-timing-function: steps(10);
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 00.1ms;
+
 
           animation: grain 0.1ms steps(10) infinite;
 
