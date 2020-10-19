@@ -14,6 +14,8 @@
   background-size: 57vh, auto, auto;
 
   animation: grain 0.1ms steps(10) infinite;
+  -webkit-animation: grain 0.1ms steps(10) infinite;
+
 
   height: 100vh;
   width: 100vw;
@@ -29,6 +31,19 @@ a {
 
 
 @keyframes grain {
+  0%, 100% {   background-position: bottom, 3px 3px, 13px 30px }
+  10% { background-position: bottom, 13px 30px, -30px -35px }
+  20% { background-position: bottom, 40px -10px, 33px 25px }
+  30% { background-position: bottom, -38px 7px, -38px 7px}
+  40% { background-position: bottom, 33px 25px, 33px 25px}
+  50% { background-position: bottom, -15px -20px, 19px 40px }
+  60% { background-position: bottom, 19px 40px, -30px -35px}
+  70% { background-position: bottom, -30px -35px, 6px 27px}
+  80% { background-position: bottom, 6px 27px, -10px 10px }
+  90% { background-position: bottom, -10px 10px,  6px 27px }
+}
+
+@-webkit-keyframes grain {
   0%, 100% {   background-position: bottom, 3px 3px, 13px 30px }
   10% { background-position: bottom, 13px 30px, -30px -35px }
   20% { background-position: bottom, 40px -10px, 33px 25px }
@@ -181,11 +196,7 @@ embed {
 
 .modal {
 
-  /* transition: heigth, 0.3s, ease; */
-  
   transition: 0.2s, ease, 0.2s;
-
-
 
   position: absolute;
   top: 50%;
@@ -198,10 +209,8 @@ embed {
   overflow: hidden;
   z-index: 10;
 
-
   border: 2px solid white;
-    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.66);
-
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.66);
 
   visibility: hidden;
 }

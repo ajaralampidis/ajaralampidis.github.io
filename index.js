@@ -1,3 +1,5 @@
+import Siema from 'siema.min.js'
+
 // ================ NavBar ========================
 const contactButton = document.getElementById('contact');
 const webDevButton = document.getElementById('webDev');
@@ -56,6 +58,7 @@ multimediaButton.addEventListener('click', openModal)
 
 
 // ================== close modals when click on overlay ===================
+
 function overlayCloseModal () {
   for (let modal of allModals) {
     modal.style.height = '0px'
@@ -64,6 +67,9 @@ function overlayCloseModal () {
   modalOverlay.style.visibility = 'hidden'
 }
 modalOverlay.addEventListener('click', overlayCloseModal)
+
+// ================= carousel 
+
 
 
 
