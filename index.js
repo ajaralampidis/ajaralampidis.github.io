@@ -1,4 +1,4 @@
-import Siema from 'siema.min.js'
+// import Siema from 'siema.min.js'
 
 // ================ NavBar ========================
 const contactButton = document.getElementById('contact');
