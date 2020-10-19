@@ -54,8 +54,12 @@
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 00.1ms;
 
+  animation-name: grain;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+  animation-duration: 00.1ms;
 
-          animation: grain 0.1ms steps(10) infinite;
+
 
   height: 100vh;
   width: 100vw;
