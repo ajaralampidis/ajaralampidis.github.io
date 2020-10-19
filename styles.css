@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .home {
   text-align: center;
   color: white;
@@ -13,20 +20,36 @@
   background-position: bottom, 0px 0px, 0px 0px;
   background-size: 57vh, auto, auto;
 
-  animation: grain 0.1ms steps(10) infinite;
   -webkit-animation: grain 0.1ms steps(10) infinite;
 
+          animation: grain 0.1ms steps(10) infinite;
 
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 40vh auto;
   grid-template-rows: 40vh auto;
 }
 
 a {
   color: white;
   text-decoration: none;
+}
+
+
+@-webkit-keyframes grain {
+  0%, 100% {   background-position: bottom, 3px 3px, 13px 30px }
+  10% { background-position: bottom, 13px 30px, -30px -35px }
+  20% { background-position: bottom, 40px -10px, 33px 25px }
+  30% { background-position: bottom, -38px 7px, -38px 7px}
+  40% { background-position: bottom, 33px 25px, 33px 25px}
+  50% { background-position: bottom, -15px -20px, 19px 40px }
+  60% { background-position: bottom, 19px 40px, -30px -35px}
+  70% { background-position: bottom, -30px -35px, 6px 27px}
+  80% { background-position: bottom, 6px 27px, -10px 10px }
+  90% { background-position: bottom, -10px 10px,  6px 27px }
 }
 
 
@@ -42,20 +65,6 @@ a {
   80% { background-position: bottom, 6px 27px, -10px 10px }
   90% { background-position: bottom, -10px 10px,  6px 27px }
 }
-
-@-webkit-keyframes grain {
-  0%, 100% {   background-position: bottom, 3px 3px, 13px 30px }
-  10% { background-position: bottom, 13px 30px, -30px -35px }
-  20% { background-position: bottom, 40px -10px, 33px 25px }
-  30% { background-position: bottom, -38px 7px, -38px 7px}
-  40% { background-position: bottom, 33px 25px, 33px 25px}
-  50% { background-position: bottom, -15px -20px, 19px 40px }
-  60% { background-position: bottom, 19px 40px, -30px -35px}
-  70% { background-position: bottom, -30px -35px, 6px 27px}
-  80% { background-position: bottom, 6px 27px, -10px 10px }
-  90% { background-position: bottom, -10px 10px,  6px 27px }
-}
-
 
 .arButton {
 background-color: white;
@@ -82,7 +91,10 @@ right: 16px;
   width: 100vw;
   margin: auto;
 
+  display: -ms-grid;
+
   display: grid;
+  -ms-grid-rows: 31vh auto;
   grid-template-rows: 31vh auto;
 }
 
@@ -105,7 +117,9 @@ right: 16px;
 }
 
 .navElement {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 9fr;
   grid-template-columns: 1fr 9fr;
   cursor: pointer;
   text-align: left;
@@ -127,11 +141,15 @@ right: 16px;
 .title {
   height: auto;
   overflow: hidden;
+  -webkit-transition: ease-in-out;
+  -o-transition: ease-in-out;
   transition: ease-in-out;
   border-bottom: 1px solid white;
   padding-bottom: 3px;
   color: white;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 15px;
   grid-template-columns: auto 15px;
   text-align: left;
 }
@@ -147,8 +165,12 @@ right: 16px;
   height: 0;
   width: 0px;
   visibility: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
   grid-column-end: span 2;
 }
 
@@ -164,17 +186,24 @@ right: 16px;
 .info:hover ~ .infoData span {
   display: inline-block;
   padding-left: 120%;
-  animation-delay: 0.6s;
-  animation: marquee 12s linear infinite;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation: marquee 12s linear infinite;
+          animation: marquee 12s linear infinite;
 }
 
 .infoData span {
   padding-left: 120%; 
 }
 
+@-webkit-keyframes marquee {
+  0%   { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  100% { -webkit-transform: translate(-100%, 0); transform: translate(-100%, 0); }
+}
+
 @keyframes marquee {
-  0%   { transform: translate(0, 0); }
-  100% { transform: translate(-100%, 0); }
+  0%   { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  100% { -webkit-transform: translate(-100%, 0); transform: translate(-100%, 0); }
 }
 
 embed {
@@ -190,18 +219,28 @@ embed {
   height: 100vh;
   width: 100vw;
 
+  -webkit-transition: 0.3s;
+
+  -o-transition: 0.3s;
+
   transition: 0.3s;
   visibility: hidden;
 }
 
 .modal {
 
+  -webkit-transition: 0.2s, ease, 0.2s;
+
+  -o-transition: 0.2s, ease, 0.2s;
+
   transition: 0.2s, ease, 0.2s;
 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 
   height: 0vh;
   width: 80vw;
@@ -210,7 +249,8 @@ embed {
   z-index: 10;
 
   border: 2px solid white;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.66);
+  -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.66);
+          box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.66);
 
   visibility: hidden;
 }
@@ -230,7 +270,9 @@ embed {
 }
 
 #multimediaModal{
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: auto, 15px, auto;
   grid-template-rows: auto, 15px, auto;
   text-align: center;
   color: white;
@@ -238,6 +280,7 @@ embed {
 }
 
 #multimediaModal span {
+  -ms-grid-row: 2;
   grid-row: 2;
 }
 
