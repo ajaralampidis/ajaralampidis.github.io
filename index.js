@@ -1,5 +1,3 @@
-// import Siema from 'siema.min.js'
-
 // ================ NavBar ========================
 const contactButton = document.getElementById('contact');
 const webDevButton = document.getElementById('webDev');
@@ -11,7 +9,7 @@ const multimediaButton = document.getElementById('multimedia');
 let modalOverlay = document.getElementById('modalOverlay'); // not a modal but the overlay
 let allModals = document.getElementsByClassName('modal') // all modal Html collection (not an array but kind of)
 let contactModal = document.getElementById('contactModal');
-let webDevModal = document.getElementById('artModal');
+let webDevModal = document.getElementById('webDevModal');
 let artModal = document.getElementById('artModal');
 let industrialDesignModal = document.getElementById('industrialDesignModal');
 let multimediaModal = document.getElementById('multimediaModal');

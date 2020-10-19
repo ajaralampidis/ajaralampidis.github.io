@@ -1,13 +1,29 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+  border: 1px solid white 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orangered; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orangered; 
+}
+
 
 
 @-webkit-keyframes grain {
-  0%, 100% {   background-position: bottom, 3px 3px, 13px 30px }
+  100% {   background-position: bottom, 3px 3px, 13px 30px }
   10% { background-position: bottom, 13px 30px, -30px -35px }
   20% { background-position: bottom, 40px -10px, 33px 25px }
   30% { background-position: bottom, -38px 7px, -38px 7px}
@@ -21,7 +37,7 @@
 
 
 @keyframes grain {
-  0%, 100% {   background-position: bottom, 3px 3px, 13px 30px }
+  100% {   background-position: bottom, 3px 3px, 13px 30px }
   10% { background-position: bottom, 13px 30px, -30px -35px }
   20% { background-position: bottom, 40px -10px, 33px 25px }
   30% { background-position: bottom, -38px 7px, -38px 7px}
@@ -34,10 +50,6 @@
 }
 
 .home {
-  text-align: center;
-  color: white;
-  font-family: 'Inconsolata',Consolas, monaco, monospace;
-
   background-blend-mode: multiply, normal;
   background-color: orangered;
   background-image: 
@@ -48,27 +60,21 @@
   background-position: bottom, 0px 0px, 0px 0px;
   background-size: 57vh, auto, auto;
 
-
   -webkit-animation-name: grain;
   -webkit-animation-duration: 0.1ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: normal;
-  -webkit-animation-timing-function: linear;
+  -webkit-animation-timing-function: steps(10);
   -webkit-animation-fill-mode: none;
   -webkit-animation-delay: 0;
-
-
 
   animation-name: grain;
   animation-duration: 0.1ms;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  animation-timing-function: linear;
+  animation-timing-function: steps(10);
   animation-fill-mode: none;
   animation-delay: 0;
-
-
-
 
 
   height: 100vh;
@@ -78,6 +84,11 @@
   display: grid;
   -ms-grid-rows: 40vh auto;
   grid-template-rows: 40vh auto;
+
+  text-align: center;
+  color: white;
+  font-family: 'Inconsolata',Consolas, monaco, monospace;
+
 }
 
 a {
@@ -247,6 +258,9 @@ embed {
 }
 
 .modal {
+  text-align: center;
+  color: white;
+  font-family: 'Inconsolata',Consolas, monaco, monospace;
 
   -webkit-transition: 0.2s, ease, 0.2s;
 
@@ -322,7 +336,34 @@ i:hover{
   color: orangered;
 }
 
-/* .artModal {
-  display: grid;
-  grid-template-rows: ;
-} */
+.siema {
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.siemaElement{
+  overflow: scroll;
+  margin: auto;
+  width: 95%;
+  max-width: 600px;
+  height: 67vh;
+}
+
+.controlers {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.controlers > button {
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'Inconsolata',Consolas, monaco, monospace;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.controlers > button:hover {
+  background-color: orangered;
+}
