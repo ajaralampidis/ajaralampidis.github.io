@@ -1,82 +1,40 @@
 /* width */
 ::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+  width: 0px;
+  height: 0px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: black;
-  border: 1px solid white 
+  border: 0px solid white 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: orangered; 
+  background: rgb(221, 61, 32); 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: orangered; 
+  background: rgb(221, 61, 32); 
 }
 
-
-
-@-webkit-keyframes grain {
-  100% {   background-position: bottom, 3px 3px, 13px 30px }
-  10% { background-position: bottom, 13px 30px, -30px -35px }
-  20% { background-position: bottom, 40px -10px, 33px 25px }
-  30% { background-position: bottom, -38px 7px, -38px 7px}
-  40% { background-position: bottom, 33px 25px, 33px 25px}
-  50% { background-position: bottom, -15px -20px, 19px 40px }
-  60% { background-position: bottom, 19px 40px, -30px -35px}
-  70% { background-position: bottom, -30px -35px, 6px 27px}
-  80% { background-position: bottom, 6px 27px, -10px 10px }
-  90% { background-position: bottom, -10px 10px,  6px 27px }
-}
-
-
-@keyframes grain {
-  100% {   background-position: bottom, 3px 3px, 13px 30px }
-  10% { background-position: bottom, 13px 30px, -30px -35px }
-  20% { background-position: bottom, 40px -10px, 33px 25px }
-  30% { background-position: bottom, -38px 7px, -38px 7px}
-  40% { background-position: bottom, 33px 25px, 33px 25px}
-  50% { background-position: bottom, -15px -20px, 19px 40px }
-  60% { background-position: bottom, 19px 40px, -30px -35px}
-  70% { background-position: bottom, -30px -35px, 6px 27px}
-  80% { background-position: bottom, 6px 27px, -10px 10px }
-  90% { background-position: bottom, -10px 10px,  6px 27px }
+html, body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(221, 61, 32);
+  overflow: hidden; 
+  margin: 0;
 }
 
 .home {
   background-blend-mode: multiply, normal;
-  background-color: orangered;
-  background-image: 
-  url('assets/perfil1.png'),
-  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAHlBMVEUAAAD0RgTUQgTkQgT0QgTUPgT8RgTcQgTsQgTMPgRG+Q3zAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAABB1JREFUOI0N08t2sjoAQOG8QsWKHbb+RTtULonDVit0iCjQIUVIHGKAwJBGAg5rvZ23PX2Db629NlBJMcl68ri5qe7gBxrr0ClMavVMEDdPeXGeheFrsMFJRcNY+oVmqiLApPnbyzI+XXNrNu4IyT1RFMy/9w3QC6MwYszDDboiwlypquGs5fABvAa34lUXKR5ImehoxoTY0rGDzDmAWQ7Vm36hITo8Tkh9HoW8N6VdBIhU8FU1ZExFwR8S7sXyOT4lUxV4ausO6IVXvoLzSZdnCj9D9MwKsI0Lq2ivydf9G0uV72jxUBKc2GoIVK4NF7sflcZZ5ELIFL7y1xHy10B72RUXzCJy+VKadldtaG9bxIVqgLGtOHeT6ZgS4456ZkZEKZE8jyuQ1EK6Zk5yqAyMbBU2pTG6l1tFBefRNPY+mdJg42Dp/TSSkvWmF4UXcAevv0Hy+dk58kOCGHsTa/aoclgAurmVs9UENSHXXFugY48zMWJXDDKoFCHcLEVd1NX7+mMLF/AGR8gBiTeWidMbmZq50W9NdGB6rSi74BNItTknwk5CtB4MWq0/N3wR3Py2B2ATmR9VnKPLONMd9ZO7t0tNqFGBftnyvl5oVo8VBTU6ySEUPoQxBx68sLVa7r+ny/r3Y/YdEFfanFcWAvhXzUnjuO1sTjjMJU/49owdyjeQeXHcLM6PwVwMb5NBmZlq6S2F1wKPQNzmuNvzsyNLOyjkVymhrb0A6iHIRsSfuZdh/Myc+/icG2GVLylwxBmZP3dUqHRqyg4JlU4Lb1c8BPYoa5m1T9uu89Jasboq6lVe7l67oBb0ceSbBvJC5xCj2efNV5cWXbuAi2mcYshyBLkIXdM9hJsKQhyCGb+8q32/2bmnvS5zFWnd5fZdghNAWDqSGtWI6TS2qNgO6k2l9Q3eAu0sdUMY7psxSd4Ng3jJEdMatgfgkkjrGE+c7qGRnt5ZLH2MUNstvkAWNW3SNM5ubN15hoPLXOiVhFEFfLMKe/kTLchea+zYfc17+jRK7D8BjCz6+3IJw3ks9f/k3yfX9wQuAS4eBJ66f+GQhfVL9B8rUIM93gdKLDu79J/O3FAYzQVXPJuSy+c1BHRBJEc30IDvlwNItnnrt9HDM8zATAr+CWOi1LI/DOzyqjXqU4S4LwNuGcwdO5p8+Bdr8fDg7NYfoY4hB/u7K23O8i87CivaPMmPzSw7OWy3BqNWEU/TKn2XZ+c2GiWpSutjHNAUyFKRCnXd/sjexqMvfWnAJlbz3GAgjLdV1/463U31bS0/DfN+u5dywgTA4/tZLs9k+rhnfnQUESwlFHSVIRDOQJpvEMPhVjRqnBp51p8QQinYPMMHDdMlcw3sL+z9dNsn28r7u9HIxH1cFvvHg7IaWkUAJfnUt43C/x/Y07LKvUSbYwAAAABJRU5ErkJggg==),
-  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAHlBMVEUAAAD8ZgT8VgT8XgT8SgT8TgT8YgT8UgT8WgT8RgR/GyQiAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAABCVJREFUOI0FwTeColAAANB/hWUMbClJLAVJpQqIpUgsByRYjkiYcpFPKAdMc9t9DwSi01OGfareZf7J6oP3q0bId7q9Af/4aYtwhp+sT6Ts6OVVdwL36dzfYAt3OWVasX5PovBhKPahSyxDcRywfCm3UksISjuytOzGepLYFFybP0Cix7jDN8/4cMyYiVA8pT7i5U5rwF6YGNdfLs2LScoS3//s/cGWqTm9Ak9UOHzJtog21gshEOQ8fNJF0esUQGDwup3fdbfSxwRGH/ZReona9IgAYnlffaLinB4/tFaJs6xyd+9tLLuAepMq26zCd5UJR5K5d2FtYlEZ4OCR0pkb+GTBxqEN9zC5ab6pvuYiWJUru1NQ9WjPG8/ViX26WTGscU5B/QfJ2F8yuD7RZVWIQah1wduW0B1o+VP+GmPeLQ/czKw+1pZ/Pr8zPwdwWlkx7YeB95tlvcgQMFbhnnmKIE+8iHHGG7MaN1iqbRL4J62FjbkGvlhtF9YjY15OfZ52Vuvah7PWVyLYBz6+GNKfi4vynwtOv2F6mdKEXAJFoleNLFrfs9S/qk5mH2lBsfs0BlyLtMPVTByXqTeL8sNLF9CYMHUM7i37MI1qaAnVEGokw0ZML6RNzQOGNP1cGOmDihPR24BU71z9h3IPwLY0vYtC/FyMjbfOZ6bMQx6DGVqBVl1/yQfV+fqGtdtaskiYbON/KjGQCl7asXPpulnF7AT/jh3d3KrMoQVk+WNUWLfpqVq4xgI7gke8NZ9cCQ5sR6n41tno2EZoNRar51UpPPsxSBqyJB6CPtQafIl2nXH9c2jvXgX0pKNeEue3nDny5p50qqlkNmpRAXxh70xF9OOb4Sdm9Fdwai1Eya3vgm9NGVW1uejdZc8Shba2P+bUNnu0gJ0792vW3OiKds0T3ejsBd+UONmBwFATaDvp9PT4IF5rY7yq0+uJaWlAMoHZTSjZO988AkevPeYRD+pJN4Dfks1OCMxpcimgd0hCBzs5ES7dwMjWs5N5H1QppzuiGt92zLaLs6MLEMyHWcTmvDug81DvSX/9D7a5uwUOTkZmHuBRdeESnlQPcNYauYYcgC+4pr17+Dta4nK/CfQYzh3LaTtQJEwR4jwtB0y6I6rSrxdS/TJoCCLESy/K3ltOqytPEqUVmKova3gBrPNXFs6qvAwdbmoNDfTLgCMMnAQOoYZGiQ6RoWcT+96euaYjVRy/g3Nq8hXyb89AZWcJLqSOq1SqgvcbbObJ43SnW1Wt69q94NrZ/zJ+m2wFkq5Iws3shM3Jin+dltsQDhWRiQPYT52iCPysCtDohN4uurddM4xaOqA+0gy3xlrtRupa7vls5koOc5waoLAYEReDd+iWXA2xnUWXG0vJLw/Qz+XU+2udlNfv7PoqJTz5iJrwvpL/A447rlbY9h3zAAAAAElFTkSuQmCC);
-  background-repeat: no-repeat, repeat, repeat;
-  background-position: bottom, 0px 0px, 0px 0px;
-  background-size: 57vh, auto, auto;
-
-  -webkit-animation-name: grain;
-  -webkit-animation-duration: 0.1ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  -webkit-animation-timing-function: steps(10);
-  -webkit-animation-fill-mode: none;
-  -webkit-animation-delay: 0;
-
-  animation-name: grain;
-  animation-duration: 0.1ms;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-timing-function: steps(10);
-  animation-fill-mode: none;
-  animation-delay: 0;
-
-
+  background-color: rgb(221, 61, 32);
+  background: url('assets/perfil1.png'), radial-gradient(circle, rgba(221,61,32,1) 49%, rgba(177,43,19,1) 100%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 57vh, 100%;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -93,16 +51,26 @@
 
 a {
   color: white;
-  text-decoration: none;
 }
 
-.arButton {
-background-color: white;
-border-radius: 4px;
-border: none;
-position: absolute;
-top: 16px;
-right: 16px;
+a:hover {
+  color: rgb(221, 61, 32); 
+}
+
+button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border-radius: 0;
+  width: unset;
+  border: none;
+  padding: 0;
+}
+
+button:disabled {
+  color: lightgrey;
+  text-decoration: line-through;
+  cursor: not-allowed;
 }
 
 .modelContainer {
@@ -114,6 +82,18 @@ right: 16px;
 #prismModel {
   width: 40vh;
   height: 40vh;
+}
+
+model-viewer {
+  --poster-color: transparent;
+}
+
+model-viewer::part(default-progress-mask){
+  display: none;
+}
+
+model-viewer::part(default-ar-button) {
+  display: none;
 }
 
 .profile {
@@ -130,20 +110,26 @@ right: 16px;
 
 .navbar {  
   /* border-radius: 3px; */
-  width: 35vmin;
+  width: fit-content;
   max-width: 350px;
   /* max-width: 145px; */
   margin: auto;
   padding: 7px;
-  font-size: calc(8px + 1.3vmin );
+  font-size: 1.2rem;
   color: white;
   /* background-color: white; */
   border: 1px solid white;
 }
+@media (max-width: 700px){
+  .navbar {
+    font-size: 1.5rem;
+  }
+}
 
-.navElement:hover {
+.navElement:hover, .navElement:focus {
   color: white;
-  background-color: orangered;
+  background-color: rgb(221, 61, 32);
+  outline: none;
 }
 
 .navElement {
@@ -154,6 +140,8 @@ right: 16px;
   cursor: pointer;
   text-align: left;
   margin-top: 5px;
+  padding-right: 1em;
+  width: 100%;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.15); */
 }
 
@@ -163,7 +151,7 @@ right: 16px;
   padding-right: 5px;
 }
 
-.navElement:hover > .navElementIndicator {
+.navElement:hover > .navElementIndicator, .navElement:focus > .navElementIndicator {
   visibility: visible;
 }
 
@@ -198,8 +186,9 @@ right: 16px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  grid-column-start: 1;
   -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column-end: span 2;
 }
@@ -277,7 +266,7 @@ right: 16px;
 
   height: 0vh;
   width: 80vw;
-  min-width: 301px;
+  min-width: 100px;
   overflow: hidden;
   z-index: 10;
 
@@ -323,17 +312,40 @@ right: 16px;
   font-family: 'Inconsolata',Consolas, monaco, monospace;
 }
 
-strong {
-  color: orangered;
-  font-weight: 300;
+#aboutMeModal {
+  display: flex;
+  flex-direction: column;
 }
 
-strong:hover {
+.aboutMeContent {
+  text-align: left;
+  max-width: 700px;
+  width:100%;
+  margin: auto;
+  transition: margin 2s;
+  overflow-y: scroll;
+}
+
+@media (max-width: 375px) {
+  .aboutMeContent {
+    font-size: 1rem;
+  }
+}
+
+.aboutMeContent > a {
+  font-weight: bold;
   text-decoration: underline;
+  cursor: pointer;
+} 
+
+.ti-cursor {
+  mix-blend-mode: difference;
 }
 
-i:hover{
-  color: orangered;
+:root {
+  --ti-cursor-margin-left: 0em;
+
+  --ti-cursor-margin-right: 0.1em;
 }
 
 .siema {
@@ -366,5 +378,5 @@ i:hover{
 }
 
 .controlers > button:hover {
-  background-color: orangered;
+  background-color: rgb(221, 61, 32);
 }
