@@ -73,6 +73,8 @@
 
       camera-controls
       ar
+      ar-modes="webxr scene-viewer quick-look"
+
       >
 
       </model-viewer>
@@ -109,7 +111,7 @@
             <span class="navElementIndicator"> > </span> Contact Me !
           </button>
           
-          <button class="navElement onlyMobile" id="arButton" tabindex="0" disabled title="Only for mobile or tablet">
+          <button class="navElement onlyMobile" id="arButton" tabindex="0" title="Only for devices that supports AR">
             <span class="navElementIndicator"> > </span> Augment Reality
           </button> 
          
@@ -129,7 +131,12 @@
   </div>
 
   <div id='modalOverlay'></div>
-
+    
+  <div id='arButtonModal' class="modal div">
+    <div class='modalHeader'>
+      I am so sorry, your device doesn't support AR. :(
+    </div>
+  </div>
   
   <div id='aboutMeModal' class="modal div">
     <div class='aboutMeContent modalHeader'>
