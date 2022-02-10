@@ -67,11 +67,13 @@ button {
   padding: 0;
 }
 
-button:disabled {
+button:disabled, button.disabled {
   color: lightgrey;
   text-decoration: line-through;
   cursor: not-allowed;
 }
+
+
 
 .modelContainer {
   margin:auto;
@@ -153,6 +155,12 @@ model-viewer::part(default-ar-button) {
 
 .navElement:hover > .navElementIndicator, .navElement:focus > .navElementIndicator {
   visibility: visible;
+}
+
+@media screen and (min-width: 1024px) {
+  .onlyMobile {
+    display: none 
+  }
 }
 
 
@@ -348,35 +356,8 @@ model-viewer::part(default-ar-button) {
   --ti-cursor-margin-right: 0.1em;
 }
 
-.siema {
-  text-align: center;
-  align-items: center;
-  margin: auto;
-}
-
-.siemaElement{
-  background-color: white;
-  overflow: scroll;
-  margin: auto;
-  width: 95%;
-  max-width: 600px;
-  height: 67vh;
-}
-
-.controlers {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.controlers > button {
-  background: none;
-  border: none;
-  color: white;
-  font-family: 'Inconsolata',Consolas, monaco, monospace;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.controlers > button:hover {
-  background-color: rgb(221, 61, 32);
+#arButtonModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
