@@ -92,33 +92,26 @@ webDevButton.addEventListener('click', openModal)
 const arButton = document.getElementById("arButton");
 const errorModal = document.getElementById("arErrorModal")
 
-arButton.addEventListener("click", modelViewer[0].activateAR)
+
+const arButtonHandle = () => {
+  modelViewer[0].activateAR()
+}
+
+
+arButton.addEventListener("click", arButtonHandle)
 
 modelViewer[0].addEventListener('ar-status', (event) => {
 
   if(event.detail.status === 'failed'){
     errorModal.style.visibility = 'visible';
-    currentModal.style.height = '80vh'
+    errorModal.style.height = '80vh'
     modalOverlay.style.visibility = 'visible';
-    arButton.removeEventListener("click", modelViewer[0].activateAR)
-    arButton.addEventListener('click', openModal)
-    arButton.classList.add("disabled");
+    // arButton.removeEventListener("click", modelViewer[0].activateAR)
+    // arButton.addEventListener('click', openModal)
+    //  arButton.classList.add("disabled");
   }
     
 });
-
-window.addEventListener('load', (event) => {
-
-  if (!modelViewer[0].canActivateAR) {
-    arButton.removeEventListener("click", modelViewer[0].activateAR)
-    arButton.addEventListener('click', openModal)
-    arButton.classList.add("disabled");
-  }
-});
-
-
-
-
 
 // ================== close modals when click on overlay ===================
 

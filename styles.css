@@ -356,7 +356,7 @@ model-viewer::part(default-ar-button) {
   --ti-cursor-margin-right: 0.1em;
 }
 
-#arButtonModal {
+#arErrorModal {
   display: flex;
   flex-direction: column;
   justify-content: center;
